@@ -9,9 +9,9 @@ export default function middleware(request) {
         return new Response('Hello from the API!');
     }
 
-    const country = geolocation(request);
-
-    console.log('country', country)
-    console.log(new URL('/allow', request.url))
-    return rewrite('/allow')
+    console.log('request', request)
+    console.log('url', request.url)
+    let test = rewrite('/allow')
+    console.log('test', test)
+    return test
 }
