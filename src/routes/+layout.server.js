@@ -8,6 +8,7 @@ export function load({ url }) {
     const { host } = url;
     const subdomain = subdomains.find((subdomain) => host.includes(subdomain));
 
+    console.log('root major', url)
     Object.entries(url).forEach(([key, value]) => {
         console.log('root', key, value)
     })
