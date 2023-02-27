@@ -11,5 +11,7 @@ export default function middleware(request) {
 
     const country = geolocation(request);
 
-    return rewrite(new URL('/allow', request.url))
+    console.log('country', country)
+    console.log(new URL('/allow', request.url))
+    return rewrite('/allow')
 }
