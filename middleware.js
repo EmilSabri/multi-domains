@@ -9,9 +9,8 @@ export default function middleware(request) {
         return new Response('Hello from the API!');
     }
 
-    console.log('request', request)
     console.log('url', request.url)
-    let test = rewrite('/allow')
-    console.log('test', test)
-    return test
+    console.log('pathname', pathname)
+
+    return rewrite(new URL('/allow', 'https://multi-domains.vercel.app'))
 }
